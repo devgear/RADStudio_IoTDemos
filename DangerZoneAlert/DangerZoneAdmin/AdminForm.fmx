@@ -122,12 +122,8 @@ object Form1: TForm1
   end
   object KinveyProvider1: TKinveyProvider
     ApiVersion = '3'
-    AppKey = 'kid_-JM3gi9r7g'
-    AppSecret = '56c45921b81846a680194e3f0894f4ce'
-    MasterSecret = '42e7c5c743b64a3b986839cf2d0a1a31'
     UserName = 'admin'
     Password = 'admin'
-    AndroidPush.GCMAppID = '593537437466'
     Left = 48
     Top = 32
   end
@@ -148,7 +144,6 @@ object Form1: TForm1
     Top = 112
   end
   object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
-    Active = True
     Dataset = FDMemTable1
     FieldDefs = <>
     ResponseJSON = BackendQuery1
@@ -156,53 +151,7 @@ object Form1: TForm1
     Top = 184
   end
   object FDMemTable1: TFDMemTable
-    Active = True
-    FieldDefs = <
-      item
-        Name = '_id'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = 'username'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = 'distance'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = 'datetime'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = 'uuid'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = 'major'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = 'minor'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = '_acl'
-        DataType = ftWideString
-        Size = 255
-      end
-      item
-        Name = '_kmd'
-        DataType = ftWideString
-        Size = 255
-      end>
+    FieldDefs = <>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll

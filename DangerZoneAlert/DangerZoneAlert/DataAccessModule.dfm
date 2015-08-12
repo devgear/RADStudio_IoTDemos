@@ -4,10 +4,6 @@ object dmDataAccess: TdmDataAccess
   Width = 429
   object KinveyProvider1: TKinveyProvider
     ApiVersion = '3'
-    AppKey = 'kid_-JM3gi9r7g'
-    AppSecret = '56c45921b81846a680194e3f0894f4ce'
-    MasterSecret = '42e7c5c743b64a3b986839cf2d0a1a31'
-    AndroidPush.GCMAppID = '593537437466'
     PushEndpoint = 'SpecificUsersMessage'
     Left = 48
     Top = 32
