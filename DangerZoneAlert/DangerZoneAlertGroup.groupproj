@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A4C61DB8-80E0-4307-A2F2-7A1F7D06240B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DangerZoneAlert\DangerZoneAlert.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DangerZoneAdmin\DangerZoneAdmin.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DangerZoneAlert">
+        <MSBuild Projects="DangerZoneAlert\DangerZoneAlert.dproj"/>
+    </Target>
+    <Target Name="DangerZoneAlert:Clean">
+        <MSBuild Projects="DangerZoneAlert\DangerZoneAlert.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DangerZoneAlert:Make">
+        <MSBuild Projects="DangerZoneAlert\DangerZoneAlert.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DangerZoneAdmin">
+        <MSBuild Projects="DangerZoneAdmin\DangerZoneAdmin.dproj"/>
+    </Target>
+    <Target Name="DangerZoneAdmin:Clean">
+        <MSBuild Projects="DangerZoneAdmin\DangerZoneAdmin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DangerZoneAdmin:Make">
+        <MSBuild Projects="DangerZoneAdmin\DangerZoneAdmin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DangerZoneAlert;DangerZoneAdmin"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DangerZoneAlert:Clean;DangerZoneAdmin:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DangerZoneAlert:Make;DangerZoneAdmin:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

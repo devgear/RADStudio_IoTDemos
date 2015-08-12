@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{80C03B44-ACA5-4B5E-8E5C-46AF99E731F9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HealthDataRepeater\HealthDataRepeater.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HealthDataCollector\HealthDataDesktop.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HealthDataRepeater">
+        <MSBuild Projects="HealthDataRepeater\HealthDataRepeater.dproj"/>
+    </Target>
+    <Target Name="HealthDataRepeater:Clean">
+        <MSBuild Projects="HealthDataRepeater\HealthDataRepeater.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HealthDataRepeater:Make">
+        <MSBuild Projects="HealthDataRepeater\HealthDataRepeater.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HealthDataDesktop">
+        <MSBuild Projects="HealthDataCollector\HealthDataDesktop.dproj"/>
+    </Target>
+    <Target Name="HealthDataDesktop:Clean">
+        <MSBuild Projects="HealthDataCollector\HealthDataDesktop.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HealthDataDesktop:Make">
+        <MSBuild Projects="HealthDataCollector\HealthDataDesktop.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HealthDataRepeater;HealthDataDesktop"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HealthDataRepeater:Clean;HealthDataDesktop:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HealthDataRepeater:Make;HealthDataDesktop:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

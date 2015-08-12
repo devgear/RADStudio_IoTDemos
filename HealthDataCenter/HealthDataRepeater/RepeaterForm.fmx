@@ -1,0 +1,258 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 389
+  ClientWidth = 861
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 861.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 780.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #44148#44053' '#45936#51060#53552' '#49688#51665' '#47532#54588#53552
+    end
+    object CheckBox1: TCheckBox
+      Align = Left
+      IsChecked = True
+      Size.Width = 81.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #44256#51221
+      OnChange = CheckBox1Change
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 611.000000000000000000
+    Size.Height = 341.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label2: TLabel
+      Align = Top
+      Size.Width = 611.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = #47196#44536
+      object CheckBox2: TCheckBox
+        Align = Right
+        Position.X = 456.000000000000000000
+        Size.Width = 155.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = #44540#51217#44050' '#48320#44221' '#47196#44536
+      end
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      TextSettings.WordWrap = True
+      Align = Client
+      Size.Width = 611.000000000000000000
+      Size.Height = 308.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 603.000000000000000000
+      Viewport.Height = 300.000000000000000000
+      object Text1: TText
+        Align = Bottom
+        Position.Y = 272.000000000000000000
+        Size.Width = 603.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        Text = '1233123'
+        TextSettings.HorzAlign = Trailing
+      end
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 312
+    Top = 256
+  end
+  object MultiView1: TMultiView
+    Mode = Panel
+    Size.Width = 250.000000000000000000
+    Size.Height = 341.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Layout2: TLayout
+      Align = Client
+      Size.Width = 249.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object ToolBar3: TToolBar
+        Size.Width = 249.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label4: TLabel
+          Align = Client
+          Margins.Left = 4.000000000000000000
+          Size.Width = 201.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = #48708#53080
+        end
+        object swcBeacon: TSwitch
+          Align = Right
+          IsChecked = False
+          Position.X = 205.000000000000000000
+          Position.Y = 11.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnSwitch = swcBeaconSwitch
+        end
+      end
+      object lvBeacons: TListView
+        ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+        ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 249.000000000000000000
+        Size.Height = 152.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearanceObjects.ItemObjects.Detail.Width = 100.000000000000000000
+      end
+    end
+    object Layout3: TLayout
+      Align = Bottom
+      Position.Y = 200.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 141.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ToolBar2: TToolBar
+        Size.Width = 249.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label3: TLabel
+          Align = Client
+          Margins.Left = 4.000000000000000000
+          Size.Width = 201.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = #52404#51473#44228
+        end
+        object swcBLE: TSwitch
+          Align = Right
+          IsChecked = False
+          Position.X = 205.000000000000000000
+          Position.Y = 11.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnSwitch = swcBLESwitch
+        end
+      end
+      object Layout4: TLayout
+        Align = Center
+        Size.Width = 226.000000000000000000
+        Size.Height = 62.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblWeight: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 16.000000000000000000
+          Position.Y = -1.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 61.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Text = '190.0'
+        end
+        object Label5: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 154.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 25.000000000000000000
+          Text = 'Kg'
+        end
+      end
+      object StatusBar1: TStatusBar
+        Position.Y = 119.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 249.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object txtBLEStatus: TText
+          Align = Client
+          Margins.Left = 4.000000000000000000
+          Size.Width = 245.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Not connected'
+          TextSettings.HorzAlign = Leading
+        end
+      end
+      object AniIndicator1: TAniIndicator
+        Enabled = True
+        Position.X = 96.000000000000000000
+        Position.Y = 48.000000000000000000
+      end
+    end
+  end
+  object TetheringManager: TTetheringManager
+    OnPairedFromLocal = TetheringManagerPairedFromLocal
+    Password = '1234'
+    Text = 'REPEATER_MANAGER'
+    AllowedAdapters = 'Network'
+    Left = 784
+    Top = 104
+  end
+  object TetheringAppProfile: TTetheringAppProfile
+    Manager = TetheringManager
+    Text = 'REPEATER_PROFILE'
+    Actions = <>
+    Resources = <>
+    Left = 784
+    Top = 160
+  end
+  object Beacon1: TBeacon
+    MonitorizedRegions = <
+      item
+        UUID = '{E2C56DB5-DFFB-48D2-B060-D0F5A71096E0}'
+      end>
+    SPC = 0.500000000000000000
+    OnBeaconEnter = Beacon1BeaconEnter
+    OnBeaconExit = Beacon1BeaconExit
+    OnBeaconProximity = Beacon1BeaconProximity
+    Left = 312
+    Top = 112
+  end
+  object BluetoothLE1: TBluetoothLE
+    Enabled = False
+    OnCharacteristicRead = BluetoothLE1CharacteristicRead
+    OnEndDiscoverDevices = BluetoothLE1EndDiscoverDevices
+    OnEndDiscoverServices = BluetoothLE1EndDiscoverServices
+    Left = 312
+    Top = 184
+  end
+end
